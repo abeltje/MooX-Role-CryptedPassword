@@ -1,7 +1,7 @@
 package MooX::Role::CryptedPassword;
 use Moo::Role;
 
-our $VERSION = '0.00';
+our $VERSION = '0.00_01';
 
 use Crypt::CBC;
 use constant CIPHER_KEY => 'BlahBlahBlahBlah';
