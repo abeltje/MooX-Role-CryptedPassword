@@ -1,8 +1,13 @@
 #! /usr/bin/perl -w
-use v5.10;
+use 5.010;
 use strict;
 
 use ExtUtils::MakeMaker;
+
+my $BUILD_REQUIRES = {
+    'Test::Simple'     => 0.94,
+    'Test::NoWarnings' => 0,
+};
 
 WriteMakefile(
     NAME          => 'MooX::Role::CryptedPassword',
@@ -10,7 +15,8 @@ WriteMakefile(
     ABSTRACT_FROM => 'lib/MooX/Role/CryptedPassword.pm',
 
     PREREQ_PM => {
-        'Test::Simple'    => 0,
+        %$BUILD_REQUIRES,
+
         'Crypt::CBC'      => 0,
         'Crypt::Rijndael' => 0,
         'Moo'             => 2,
@@ -23,7 +29,7 @@ WriteMakefile(
             homepage   => '',
             repository => {
                 type => 'git',
-                url  => 'http://source.test-smoke.org/git/',
+                url  => 'git@github.com:abeltje/MooX-Role-CryptedPassword.git',
             },
         },
         'x_IRC' => 'irc://irc.perl.org/#amsterdam.pm',
