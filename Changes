@@ -1,9 +1,25 @@
-Changes on 2017-01-28 for repository at:
-  Fetch URL: git@github.com:abeltje/Moox-Role-CryptedPassword.git
-  Push  URL: git@github.com:abeltje/Moox-Role-CryptedPassword.git
+Changes on 2017-02-01 for repository at:
+  Fetch URL: git@github.com:abeltje/MooX-Role-CryptedPassword.git
+  Push  URL: git@github.com:abeltje/MooX-Role-CryptedPassword.git
 
 Enjoy!
 
+________________________________________________________________________________
+[ed989f7] by abeltje on Wed, 1 Feb 2017 19:52:12 +0100
+
+     Fix dependencies in Makefile.PL
+
+
+M	MANIFEST
+M	Makefile.PL
+________________________________________________________________________________
+[b16e6ad] by abeltje on Sat, 28 Jan 2017 12:03:29 +0100
+
+     Autocommit for distribution MooX::Role::CryptedPassword 0.00_01 (test)
+
+
+A	Changes
+M	lib/MooX/Role/CryptedPassword.pm
 ________________________________________________________________________________
 [35d94dc] by abeltje on Sat, 28 Jan 2017 11:39:57 +0100
 
