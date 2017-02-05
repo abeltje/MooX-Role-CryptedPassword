@@ -17,6 +17,7 @@ WriteMakefile(
     PREREQ_PM => {
         %$BUILD_REQUIRES,
 
+        'autodie'         => 0,
         'Crypt::CBC'      => 0,
         'Crypt::Rijndael' => 0,
         'Moo'             => 2,
