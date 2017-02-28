@@ -4,6 +4,7 @@ use Moo::Role;
 our $VERSION = '0.00_03';
 
 use Crypt::CBC;
+use constant CIPHER => 'Rijndael';
 use constant CIPHER_KEY => 'BlahBlahBlahBlah';
 
 has password => (
@@ -13,23 +14,24 @@ has password => (
 );
 
 around BUILDARGS => sub {
-    my $new = shift;
+    my $buildargs = shift;
     my $class = shift;
     my %args = @_;
 
-    my $cipher_key = delete($args{cipher_key}) || CIPHER_KEY;
-    if (my $pwfile = delete $args{password_file}) {
+    if (my $pwfile = delete($args{password_file})) {
+        my $cipher_name = delete($args{cipher})     || CIPHER;
+        my $cipher_key  = delete($args{cipher_key}) || CIPHER_KEY;
+
         use autodie;
-        open my $fh, '<', $pwfile;
-        binmode($fh);
+        open my $fh, '<:raw', $pwfile;
         my $crypted_password = do {local $/; <$fh>};
         close($fh);
 
-        my $cipher = Crypt::CBC->new(cypher => 'Rijndael', key => $cipher_key);
+        my $cipher = Crypt::CBC->new(cypher => $cipher_name, key => $cipher_key);
         $args{password} = $cipher->decrypt($crypted_password);
     }
 
-    $class->$new(%args);
+    $class->$buildargs(%args);
 };
 
 1;

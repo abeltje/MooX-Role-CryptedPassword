@@ -21,9 +21,9 @@ subtest 'Basic test' => sub {
         close($fh);
     }
 
-    my $obj = WithPwd->new(password_file => $private, username => 'sheldon');
+    my $obj = WithPwd->new(password_file => $private, username => 'abeltje');
     is($obj->password, $to_protect, "Password is decrypted");
-    is($obj->username, 'SHELDON', "Usernam is uppercased");
+    is($obj->username, 'ABELTJE', "Username is uppercased");
 
     unlink($private);
 };
