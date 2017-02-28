@@ -1,9 +1,37 @@
-Changes on 2017-02-05 for repository at:
+Changes on 2017-02-28 for repository at:
   Fetch URL: git@github.com:abeltje/MooX-Role-CryptedPassword.git
   Push  URL: git@github.com:abeltje/MooX-Role-CryptedPassword.git
 
 Enjoy!
 
+________________________________________________________________________________
+[8d86c23] by abeltje on Tue, 28 Feb 2017 19:22:29 +0100
+
+     A bit of TLC for create_crypted_password
+
+        Processed user comments from the 1st presentation:
+        - attempt to read the password from a echoless terminal if
+        Term::ReadKey
+         is available for create_crypted_password (NOT a dependency)
+        - add test for create_crypted_password
+        - make the cipher configurable in the role and script (default:
+        Rijndael)
+
+
+M	MANIFEST
+M	bin/create_crypted_password
+M	lib/MooX/Role/CryptedPassword.pm
+M	t/10-moo.t
+M	t/20-moose.t
+A	t/30-create_crypted_password.t
+________________________________________________________________________________
+[7281b89] by abeltje on Sun, 5 Feb 2017 14:44:37 +0100
+
+     Autocommit for distribution MooX::Role::CryptedPassword 0.00_03 (same)
+
+
+M	Changes
+M	lib/MooX/Role/CryptedPassword.pm
 ________________________________________________________________________________
 [6870d18] by abeltje on Sun, 5 Feb 2017 14:43:09 +0100
 
