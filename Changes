@@ -1,11 +1,14 @@
-Changes on 2017-02-28 for repository at:
+Changes on 2017-03-06 for repository at:
   Fetch URL: git@github.com:abeltje/MooX-Role-CryptedPassword.git
   Push  URL: git@github.com:abeltje/MooX-Role-CryptedPassword.git
 
 Enjoy!
 
-________________________________________________________________________________
-[8d86c23] by abeltje on Tue, 28 Feb 2017 19:22:29 +0100
+0.00_04 2017-02-28 19:29:40 +0100 (9c79516 => abeltje)
+
+     Autocommit for distribution MooX::Role::CryptedPassword 0.00_04 (same)
+
+0.00_02 2017-02-28 19:22:29 +0100 (8d86c23 => abeltje)
 
      A bit of TLC for create_crypted_password
 
@@ -17,54 +20,27 @@ ________________________________________________________________________________
         - make the cipher configurable in the role and script (default:
         Rijndael)
 
-
-M	MANIFEST
-M	bin/create_crypted_password
-M	lib/MooX/Role/CryptedPassword.pm
-M	t/10-moo.t
-M	t/20-moose.t
-A	t/30-create_crypted_password.t
-________________________________________________________________________________
-[7281b89] by abeltje on Sun, 5 Feb 2017 14:44:37 +0100
+0.00_02 2017-02-05 14:44:37 +0100 (7281b89 => abeltje)
 
      Autocommit for distribution MooX::Role::CryptedPassword 0.00_03 (same)
 
-
-M	Changes
-M	lib/MooX/Role/CryptedPassword.pm
-________________________________________________________________________________
-[6870d18] by abeltje on Sun, 5 Feb 2017 14:43:09 +0100
+0.00_02 2017-02-05 14:43:09 +0100 (6870d18 => abeltje)
 
      Add 'autodie' to the dependency list.
 
-
-M	Makefile.PL
-________________________________________________________________________________
-[8097244] by abeltje on Wed, 1 Feb 2017 19:53:54 +0100
+0.00_02 2017-02-01 19:53:54 +0100 (8097244 => abeltje)
 
      Autocommit for distribution MooX::Role::CryptedPassword 0.00_02 (test)
 
-
-M	Changes
-M	lib/MooX/Role/CryptedPassword.pm
-________________________________________________________________________________
-[ed989f7] by abeltje on Wed, 1 Feb 2017 19:52:12 +0100
+0.00_01 2017-02-01 19:52:12 +0100 (ed989f7 => abeltje)
 
      Fix dependencies in Makefile.PL
 
-
-M	MANIFEST
-M	Makefile.PL
-________________________________________________________________________________
-[b16e6ad] by abeltje on Sat, 28 Jan 2017 12:03:29 +0100
+0.00_01 2017-01-28 12:03:29 +0100 (b16e6ad => abeltje)
 
      Autocommit for distribution MooX::Role::CryptedPassword 0.00_01 (test)
 
-
-A	Changes
-M	lib/MooX/Role/CryptedPassword.pm
-________________________________________________________________________________
-[35d94dc] by abeltje on Sat, 28 Jan 2017 11:39:57 +0100
+0.00 2017-01-28 11:39:57 +0100 (35d94dc => abeltje)
 
      Initial commit.
 
@@ -72,15 +48,3 @@ ________________________________________________________________________________
         This password can be encrypted (using Rijndael cipher) in a file. 
         Decryption will take place on object instatiation...
 
-
-A	.gitignore
-A	MANIFEST
-A	Makefile.PL
-A	bin/create_crypted_password
-A	lib/MooX/Role/CryptedPassword.pm
-A	t/10-moo.t
-A	t/20-moose.t
-A	xt/00-manifest.t
-A	xt/01-compile.t
-A	xt/02-pod_syntax.t
-A	xt/03-pod-coverage.t
