@@ -11,8 +11,6 @@ my $cipher_key = 'Here is an other longish string';
 my $tmp_dir = tempdir(CLEANUP => 1);
 my $secret_file = catfile($tmp_dir, 'password.private');
 
-END { unlink $secret_file }
-
 note('Create crypted file');
 {
     local $ENV{PERL5LIB} = 'lib';
@@ -28,8 +26,12 @@ note('Create crypted file');
 
 note('Read crypted file');
 {
-    use autodie;
-    my $content = do {local (@ARGV, $/) = ($secret_file); <>};
+    my $content = do {
+        use autodie;
+        open(my $fh, '<:raw', $secret_file);
+        local $/;
+        <$fh>;
+    };
 
     my $dcrypt = Crypt::CBC->new(
         -cipher => 'Rijndael',
@@ -40,5 +42,7 @@ note('Read crypted file');
 
     is($un_secret, $secret, "Decryption was successful");
 }
+
+ok(unlink($secret_file), "temp-file removed");
 
 abeltje_done_testing;
