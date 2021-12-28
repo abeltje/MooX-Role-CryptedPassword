@@ -1,18 +1,24 @@
-Changes on 2021-12-27 for repository at:
+Changes on 2021-12-28 for repository at:
   Fetch URL: ssh://git@source.test-smoke.org:9999/~/MooX-Role-CryptedPassword
   Push  URL: ssh://git@source.test-smoke.org:9999/~/MooX-Role-CryptedPassword
 
 Enjoy!
 
-0.01_01 2021-12-27T20:32:21+01:00 (c4d214c => Abe Timmerman)
- - (Abe Timmerman, 1 second ago) Autocommit for distribution
+0.01_02 2021-12-28T10:20:24+01:00 (805e944 => Abe Timmerman)
+ - (Abe Timmerman, 4 seconds ago) Autocommit for distribution
+   MooX::Role::CryptedPassword 0.01_02 (test)
+
+0.01_01 2021-12-27T20:32:21+01:00 (510ee44 => Abe Timmerman)
+ - (Abe Timmerman, 14 hours ago) Autocommit for distribution
    MooX::Role::CryptedPassword 0.01_01 (test)
+
+ - (abeltje, 13 hours ago) Fix testcase, file was not porperly closed
 
 0.01 2017-03-06T18:14:25+01:00 (3fcf3e2 => abeltje)
  - (abeltje, 4 years, 10 months ago) Autocommit for distribution
    MooX::Role::CryptedPassword 0.01 (minor)
 
- - (Abe Timmerman, 8 minutes ago) Convert to using t::Test::abeltje
+ - (Abe Timmerman, 14 hours ago) Convert to using t::Test::abeltje
  -     Attempt to fix an issue found on CPAN-Testers (use a temp-dir)
  -     Fix some issues with the package.
  -     Also fix some errors in the usage of Crypt::CBC.
